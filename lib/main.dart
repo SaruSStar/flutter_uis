@@ -37,11 +37,9 @@ class Menus extends StatefulWidget {
 
 class _MenusState extends State<Menus> {
 
-
-
-
   @override
   Widget build(BuildContext context) {
+    String github ="https://github.com/akshayyadav76/flutter_uis";
 
     var size = MediaQuery.of(context).size;
     final double itemHeight = (size.height - kToolbarHeight - 40) / 3;
@@ -50,7 +48,34 @@ class _MenusState extends State<Menus> {
     TextStyle textStyle = TextStyle(fontSize: 18,fontWeight: FontWeight.w500, color: Colors.black);
 
     return Scaffold(
-        appBar: AppBar(
+      drawer: Drawer(
+        child: Column(
+          children: <Widget>[
+            UserAccountsDrawerHeader(
+              decoration: BoxDecoration(
+                  image: DecorationImage(image: AssetImage("images/ic_launcher.png")
+              ) ),
+            ),
+            Text("flutter Uis",style: TextStyle(fontSize: 30),),
+            Text("Version 1.0",style: TextStyle(fontSize: 18),),
+            Divider(),
+            ListTile(leading: Icon(Icons.code),
+            title: Text("Code on Github",style: TextStyle(fontSize: 24,
+                fontWeight: FontWeight.w300),),onTap: (){
+                  github;
+              },),
+            ListTile(leading: Icon(Icons.shop_two),
+              title: Text("Rate This App",style: TextStyle(fontSize: 24,
+                  fontWeight: FontWeight.w300),),onTap: (){
+
+              },),
+
+          ],
+
+        ),
+      ),
+
+        appBar: AppBar(iconTheme: IconThemeData(color: Colors.black),
           backgroundColor: Colors.white70,
           title: Text("flutter Uis",style: TextStyle(fontSize: 30,fontWeight: FontWeight.w500, color: Colors.black),),
           centerTitle: true,

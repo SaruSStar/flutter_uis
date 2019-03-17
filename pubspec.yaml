@@ -47,6 +47,7 @@ flutter:
     - images/shoes1.jpg
     - images/shoes2.jpg
     - images/shoes3.jpg
+    - images/ic_launcher.png
     - code/login2 full.jpg
     - code/dashboard1.jpg
     - code/dashboard2.jpg
@@ -58,6 +59,7 @@ flutter:
     - code/ecom.jpg
     - code/hide.jpg
     - code/setting.jpg
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
